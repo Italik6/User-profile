@@ -62,7 +62,7 @@ export default function(state = initialState, action) {
         window.scrollTo(0, 0);
         return {
           ...state,
-          comments: [newComment, ...state.comments]
+          comments: [...state.comments, newComment]
         };
       } else {
         return state;
