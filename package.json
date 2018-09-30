@@ -1,0 +1,30 @@
+{
+  "name": "user-profile",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://e-italik.com",
+  "dependencies": {
+    "material-ui": "^0.19.1",
+    "prop-types": "^15.5.10",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.1",
+    "react-fontawesome": "^1.6.1",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.5",
+    "react-test-renderer": "^16.5.2",
+    "redux": "^4.0.0",
+    "webpack": "^3.11.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0"
+  }
+}

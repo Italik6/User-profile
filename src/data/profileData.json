@@ -1,0 +1,10 @@
+{
+  "name": "Harvey Specter",
+  "location": "New York, USA",
+  "picture": "https://i.imgur.com/xYB5wii.jpg",
+  "likes": 232,
+  "liked": false,
+  "following": 988,
+  "followed": false,
+  "followers": 1922
+}
