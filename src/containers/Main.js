@@ -31,21 +31,25 @@ class Main extends React.Component {
   };
 
   addComment = e => {
-    e.preventDefault();
-    let today = new Date();
-    let todayISO = today.toISOString();
-    let newComment = {
-      id: this.props.comments.comments.length + 2,
-      author: {
-        picture: "https://i.imgur.com/xYB5wii.jpg",
-        name: "John Smith"
-      },
-      date: todayISO,
-      content: e.target[0].value
-    };
+    if (e.target[0].value.length <= 0) {
+      alert("Enter your comment before submit");
+    } else {
+      e.preventDefault();
+      let today = new Date();
+      let todayISO = today.toISOString();
+      let newComment = {
+        id: this.props.comments.comments.length + 2,
+        author: {
+          picture: "https://i.imgur.com/xYB5wii.jpg",
+          name: "John Smith"
+        },
+        date: todayISO,
+        content: e.target[0].value
+      };
 
-    this.props.addComment(newComment);
-    e.target[0].value = " ";
+      this.props.addComment(newComment);
+      e.target[0].value = " ";
+    }
   };
 
   render() {
@@ -58,6 +62,7 @@ class Main extends React.Component {
       return 0;
     }
     comments.comments.sort(compare);
+
     return (
       <div>
         <MuiThemeProvider>
