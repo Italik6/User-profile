@@ -2,7 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import Comment from "./Comment";
 
+
 const CommentList = props => {
+  // sort comments by date
+  function compare(a, b) {
+    if (a.date < b.date) return -1;
+    if (a.date > b.date) return 1;
+    return 0;
+  }
+  props.comments.sort(compare);
+
   const listComments = props.comments.map(comment => (
     <Comment
       key={comment.id}

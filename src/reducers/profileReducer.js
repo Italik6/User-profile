@@ -59,12 +59,6 @@ export default function(state = initialState, action) {
     case ADD_COMMENT:
       let newComment = action.payload;
       if (state.comments !== undefined) {
-        function compare(a, b) {
-          if (a.date < b.date) return -1;
-          if (a.date > b.date) return 1;
-          return 0;
-        }
-        state.comments.sort(compare);
         return {
           ...state,
           comments: [...state.comments, newComment]
