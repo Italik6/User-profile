@@ -5,7 +5,7 @@ export const Dialog = props => {
   return (
     <div className="backdrop">
       <div className="dialog">
-        <input type="text" value={window.location} readOnly />
+        <input id="url" type="text" value={window.location} readOnly />
         <br />
         <button className="dialog-button" onClick={props.onClick}>
           CLOSE

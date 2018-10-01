@@ -65,7 +65,7 @@ class ProfileInfo extends React.Component {
           <p className="profile-follow-button-text">FOLLOW</p>
         </div>
         {/* Dialog section */}
-        {this.props.show ? <Dialog onClick={this.props.closeModal}  onKeyPress={this.props.onKeyPress} /> : null}
+        {this.props.show ? <Dialog onClick={this.props.closeModal} /> : null}
       </div>
     );
   }
