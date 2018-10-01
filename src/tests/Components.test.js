@@ -17,6 +17,15 @@ describe("Dialog Component", () => {
   });
 });
 
+describe("Dialog Component Click", () => {
+  const onClick = jest.fn();
+  test("successfully calls the onClick handler", () => {
+    const wrapper = shallow(<Dialog onClick={onClick} />);
+    expect(wrapper.find("button").length).toEqual(1);
+    wrapper.find("button").simulate("click");
+  });
+});
+
 describe("AddComment Component", () => {
   const addComment = jest.fn();
   const hintText = "";
@@ -26,6 +35,15 @@ describe("AddComment Component", () => {
         <AddComment addComment={addComment} hintText={hintText} />
       ).exists()
     ).toBe(true);
+  });
+  test("when the form is submitted'", () => {
+    beforeEach(() => {
+      const wrapper = shallow(
+        <AddComment addComment={addComment} hintText={hintText} />
+      );
+      expect(wrapper.find("form").length).toEqual(1);
+      wrapper.find("form").simulate("submit", { preventDefault() {} });
+    });
   });
 });
 

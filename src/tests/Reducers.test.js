@@ -9,7 +9,6 @@ describe("profile reducer", () => {
       profileInfo: {}
     });
   });
-
   it("should handle ADD_LIKE", () => {
     expect(
       profileReducer([], {
@@ -20,7 +19,6 @@ describe("profile reducer", () => {
       likes: NaN
     });
   });
-
   it("should handle ADD_FOLLOW", () => {
     expect(
       profileReducer([], {
@@ -48,7 +46,6 @@ describe("modal reducer", () => {
       isOpen: true
     });
   });
-
   it("should handle HIDE_MODAL", () => {
     expect(
       modalReducer([], {
