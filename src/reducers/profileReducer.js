@@ -1,17 +1,7 @@
-import {
-  ADD_LIKE,
-  SHOW_MODAL,
-  HIDE_MODAL,
-  ADD_FOLLOW,
-  TOGGLE_COMMENTS,
-  ADD_COMMENT
-} from "../actions/types";
+import { ADD_LIKE, ADD_FOLLOW } from "../actions/types";
 
 const initialState = {
-  profileInfo: {},
-  comments: [],
-  commentsList: true,
-  modal: false
+  profileInfo: {}
 };
 
 export default function(state = initialState, action) {
@@ -44,38 +34,6 @@ export default function(state = initialState, action) {
           followed: true
         };
       }
-    case TOGGLE_COMMENTS:
-      if (state.isShown) {
-        return {
-          ...state,
-          isShown: false
-        };
-      } else {
-        return {
-          ...state,
-          isShown: true
-        };
-      }
-    case ADD_COMMENT:
-      let newComment = action.payload;
-      if (state.comments !== undefined) {
-        return {
-          ...state,
-          comments: [...state.comments, newComment]
-        };
-      } else {
-        return state;
-      }
-    case SHOW_MODAL:
-      return {
-        ...state,
-        isOpen: true
-      };
-    case HIDE_MODAL:
-      return {
-        ...state,
-        isOpen: false
-      };
     default:
       return state;
   }

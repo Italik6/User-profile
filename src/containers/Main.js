@@ -5,14 +5,9 @@ import CommentList from "../components/CommentList";
 import AddComment from "../components/AddComment";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import {
-  addLike,
-  addFollow,
-  toggleComments,
-  openModal,
-  closeModal,
-  addComment
-} from "../actions/profileActions";
+import { addLike, addFollow } from "../actions/profileActions";
+import { openModal, closeModal } from "../actions/modalActions";
+import { toggleComments, addComment } from "../actions/commentsActions";
 
 class Main extends React.Component {
   toggleComments = () => {
@@ -56,6 +51,13 @@ class Main extends React.Component {
   render() {
     let hintText = "Add a comment";
     const { profileInfo, commentsList, modal, comments } = this.props;
+      // sort comments by date
+  function compare(a, b) {
+    if (a.date < b.date) return -1;
+    if (a.date > b.date) return 1;
+    return 0;
+  }
+  comments.comments.sort(compare);
     return (
       <div>
         <MuiThemeProvider>

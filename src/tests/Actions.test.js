@@ -1,4 +1,6 @@
-import * as actions from "../actions/profileActions";
+import { addLike, addFollow } from "../actions/profileActions";
+import { openModal, closeModal } from "../actions/modalActions";
+import { toggleComments, addComment } from "../actions/commentsActions";
 import * as types from "../actions/types";
 
 describe("actions", () => {
@@ -6,7 +8,7 @@ describe("actions", () => {
     const expectedAction = {
       type: types.ADD_LIKE
     };
-    expect(actions.addLike()).toEqual(expectedAction);
+    expect(addLike()).toEqual(expectedAction);
   });
 });
 
@@ -15,7 +17,7 @@ describe("actions", () => {
     const expectedAction = {
       type: types.ADD_FOLLOW
     };
-    expect(actions.addFollow()).toEqual(expectedAction);
+    expect(addFollow()).toEqual(expectedAction);
   });
 });
 
@@ -24,7 +26,7 @@ describe("actions", () => {
     const expectedAction = {
       type: types.TOGGLE_COMMENTS
     };
-    expect(actions.toggleComments()).toEqual(expectedAction);
+    expect(toggleComments()).toEqual(expectedAction);
   });
 });
 
@@ -33,7 +35,7 @@ describe("actions", () => {
     const expectedAction = {
       type: types.SHOW_MODAL
     };
-    expect(actions.openModal()).toEqual(expectedAction);
+    expect(openModal()).toEqual(expectedAction);
   });
 });
 
@@ -42,7 +44,7 @@ describe("actions", () => {
     const expectedAction = {
       type: types.HIDE_MODAL
     };
-    expect(actions.closeModal()).toEqual(expectedAction);
+    expect(closeModal()).toEqual(expectedAction);
   });
 });
 
@@ -53,6 +55,6 @@ describe("actions", () => {
       type: types.ADD_COMMENT,
       payload
     };
-    expect(actions.addComment(payload)).toEqual(expectedAction);
+    expect(addComment(payload)).toEqual(expectedAction);
   });
 });
