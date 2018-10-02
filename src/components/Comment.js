@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Comment = props => {
-  let oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-  let today = new Date();
-  let commentDate = new Date(props.date);
-  let diffDays = Math.round(
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  const today = new Date();
+  const commentDate = new Date(props.date);
+  const diffDays = Math.round(
     Math.abs((today.getTime() - commentDate.getTime()) / oneDay)
   );
 

@@ -35,9 +35,9 @@ class Main extends React.Component {
       alert("Enter your comment before submit");
     } else {
       e.preventDefault();
-      let today = new Date();
-      let todayISO = today.toISOString();
-      let newComment = {
+      const today = new Date();
+      const todayISO = today.toISOString();
+      const newComment = {
         id: this.props.comments.comments.length + 2,
         author: {
           picture: "https://i.imgur.com/xYB5wii.jpg",
@@ -53,7 +53,7 @@ class Main extends React.Component {
   };
 
   render() {
-    let hintText = "Add a comment";
+    const hintText = "Add a comment";
     const { profileInfo, commentsList, modal, comments } = this.props;
     // sort comments by date
     function compare(a, b) {

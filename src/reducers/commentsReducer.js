@@ -20,7 +20,7 @@ export default function(state = initialState, action) {
         };
       }
     case ADD_COMMENT:
-      let newComment = action.payload;
+      const newComment = action.payload;
       if (state.comments !== undefined) {
         return {
           ...state,
