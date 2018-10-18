@@ -20,7 +20,6 @@ export default function(state = initialState, action) {
           comments: [...state.comments, newComment]
         };
       }
-      break;
     default:
       return state;
   }

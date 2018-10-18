@@ -17,7 +17,7 @@ const Comment = props => {
         alt={props.name}
       />
       <p className="comment-name burgundy-color">{props.name}</p>
-      <p className="comment-date burgundy-color">{diffDays + "d"}</p>
+      <p className="comment-date">{diffDays + "d"}</p>
       <p className="comment-content comment-color">{props.body}</p>
     </div>
   );
