@@ -2,10 +2,11 @@ import { TOGGLE_COMMENTS, ADD_COMMENT } from "../actions/types";
 
 const initialState = {
   comments: [],
-  commentsList: true
+  commentsList: { isShown: true }
 };
 
 export default function(state = initialState, action) {
+  console.log();
   switch (action.type) {
     case TOGGLE_COMMENTS:
       if (state.isShown) {

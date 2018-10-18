@@ -1,7 +1,7 @@
 import { SHOW_MODAL, HIDE_MODAL } from "../actions/types";
 
 const initialState = {
-  modal: false
+  modal: { isOpen: false }
 };
 
 export default function(state = initialState, action) {

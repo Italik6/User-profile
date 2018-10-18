@@ -1,7 +1,10 @@
 import { ADD_LIKE, ADD_FOLLOW } from "../actions/types";
 
 const initialState = {
-  profileInfo: {}
+  profileInfo: {
+    liked: false,
+    followed: false
+  }
 };
 
 export default function(state = initialState, action) {
