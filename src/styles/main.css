@@ -3,30 +3,6 @@
     box-sizing: border-box;
 }
 
-.burgundy-color {
-    color: #002c71;
-}
-
-.orange-color {
-    color: #e99d46;
-}
-
-.comment-color {
-    color: #444444;
-}
-
-.quinary-color {
-    color: #8298b9;
-}
-
-.senary-color {
-    color: #d3d3d3;
-}
-
-.profile-image {
-    border-radius: 50%;
-}
-
 .container,
 .container-hidden {
     position: relative;
@@ -72,6 +48,10 @@
     grid-row-gap: 20px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+}
+
+.profile-image {
+    border-radius: 50%;
 }
 
 .profile-picture {
@@ -160,6 +140,16 @@
     letter-spacing: 3px;
 }
 
+.comment {
+    display: grid;
+    grid-template-columns: 13% 75% 12%;
+    grid-template-rows: 40px auto;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 4% 0 4% 2%;
+    border-bottom: 1px solid #ebebeb;
+}
+
 .comments,
 .comments-hidden {
     width: 90%;
@@ -196,16 +186,6 @@
     margin: 0 auto;
     width: 90%;
     padding-bottom: 20px;
-}
-
-.comment {
-    display: grid;
-    grid-template-columns: 16% 74% 10%;
-    grid-template-rows: 40px auto;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: 4% 0 4% 2%;
-    border-bottom: 1px solid #ebebeb;
 }
 
 .comment-image {
@@ -248,16 +228,6 @@
     border-radius: 100px;
 }
 
-.backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 50;
-}
-
 .dialog input {
     margin: 10px;
     padding: 10px;
@@ -287,47 +257,12 @@
     background-color: #002c71;
 }
 
-@media screen and (max-width: 499px) {
-    .container,
-    .container-hidden {
-        width: 320px;
-    }
-    .container {
-        height: 891px;
-    }
-    .profile {
-        height: 235px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 37px 42px 46px;
-        grid-row-gap: 40px;
-    }
-    .profile-picture {
-        position: absolute;
-        margin: 0 auto;
-        top: -34px;
-        left: 100%;
-    }
-    .profile-share-button {
-        grid-row: 1 / 2;
-    }
-    .profile-info {
-        grid-column: 1 / 4;
-        grid-row: 1 / 2;
-        justify-self: center;
-    }
-    .profile-stats {
-        grid-column: 1 / 4;
-        grid-row: 2 / 3;
-    }
-    .profile-follow-button,
-    .profile-follow-button-active {
-        grid-column: 1 / 4;
-        grid-row: 3 / 4;
-    }
-    .profile-info-location {
-        text-align: center;
-    }
-    .comments-hide {
-        text-align: center;
-    }
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50;
 }

@@ -1,0 +1,44 @@
+@media screen and (max-width: 499px) {
+    .container,
+    .container-hidden {
+        width: 355px;
+    }
+    .container {
+        height: 891px;
+    }
+    .profile {
+        height: 235px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 37px 42px 46px;
+        grid-row-gap: 40px;
+    }
+    .profile-picture {
+        position: absolute;
+        margin: 0 auto;
+        top: -34px;
+        left: 100%;
+    }
+    .profile-share-button {
+        grid-row: 1 / 2;
+    }
+    .profile-info {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        justify-self: center;
+    }
+    .profile-stats {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+    .profile-follow-button,
+    .profile-follow-button-active {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+    .profile-info-location {
+        text-align: center;
+    }
+    .comments-hide {
+        text-align: center;
+    }
+}
