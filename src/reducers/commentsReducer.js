@@ -6,7 +6,6 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  console.log();
   switch (action.type) {
     case TOGGLE_COMMENTS:
       return {
@@ -20,9 +19,8 @@ export default function(state = initialState, action) {
           ...state,
           comments: [...state.comments, newComment]
         };
-      } else {
-        return state;
       }
+      break;
     default:
       return state;
   }
