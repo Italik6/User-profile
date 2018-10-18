@@ -9,20 +9,13 @@ export default function(state = initialState, action) {
   console.log();
   switch (action.type) {
     case TOGGLE_COMMENTS:
-      if (state.isShown) {
-        return {
-          ...state,
-          isShown: false
-        };
-      } else {
-        return {
-          ...state,
-          isShown: true
-        };
-      }
+      return {
+        ...state,
+        isShown: !state.isShown
+      };
     case ADD_COMMENT:
       const newComment = action.payload;
-      if (state.comments !== undefined) {
+      if (state.comments) {
         return {
           ...state,
           comments: [...state.comments, newComment]
