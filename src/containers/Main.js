@@ -62,7 +62,7 @@ class Main extends React.Component {
       return 0;
     }
     comments.comments.sort(compare);
-
+    console.log(commentsList.isShown);
     return (
       <div>
         <MuiThemeProvider>
@@ -92,7 +92,8 @@ class Main extends React.Component {
                 className="orange-color comments-hide"
                 onClick={this.toggleComments}
               >
-                Hide comments ({comments.comments.length})
+                {commentsList.isShown ? "Hide comments " : "Show comments "}(
+                {comments.comments.length})
               </p>
               <CommentList
                 comments={comments.comments}
