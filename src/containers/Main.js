@@ -62,7 +62,7 @@ class Main extends React.Component {
       return 0;
     }
     comments.comments.sort(compare);
-    console.log(commentsList.isShown);
+
     return (
       <div>
         <MuiThemeProvider>

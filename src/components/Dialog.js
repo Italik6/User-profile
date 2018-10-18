@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Dialog = props => {
+const Dialog = props => {
   return (
     <div className="backdrop">
       <div className="dialog">
