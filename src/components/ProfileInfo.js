@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import FontAwesome from "react-fontawesome";
 import Dialog from "./Dialog";
-import ProfileStats from "./ProfileStats";
+import ProfileStat from "./ProfileStat";
 import FollowButton from "./FollowButton";
 
 const ProfileInfo = props => {
@@ -33,11 +33,12 @@ const ProfileInfo = props => {
         className="profile-share-button share-button orange-color"
         onClick={props.openModal}
       />
-      <ProfileStats
-        likes={props.likes}
-        following={props.following}
-        followers={props.followers}
-      />
+      <div className="profile-stats">
+        <ProfileStat stat={props.likes} desc="Likes" />
+        <ProfileStat stat={props.following} desc="Following" />
+        <ProfileStat stat={props.followers} desc="Followers" />
+      </div>
+
       <FollowButton
         addFollowedClass={props.addFollowedClass}
         addFollow={props.addFollow}
